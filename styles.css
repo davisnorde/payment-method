@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    min-height: 100vh;
+    min-height: calc(100vh - 48px);
     background-image: url('img/background.jpg');
     background-size: cover;
     font-family: 'Roboto', sans-serif;
@@ -47,6 +47,18 @@ body {
     display: flex;
     align-items: center;
     border-top: 1px solid #d5d5d5;
+    cursor: pointer;
+}
+.method:hover {
+    background-color: #ebebeb;
+}
+
+.method--selected:after {
+    content: url('img/check.svg');
+    margin-left: auto;
+}
+.method--selected .method-title {
+    color: #272B32;
 }
 
 .method img {
@@ -74,6 +86,13 @@ body {
     font-size: .75rem;
     align-items: center;
     letter-spacing: 1px;
+}
+
+.cta:hover {
+    background-color: #3f6cf2;
+}
+.cta:active {
+    height: .875rem;
 }
 
 .cta img {
